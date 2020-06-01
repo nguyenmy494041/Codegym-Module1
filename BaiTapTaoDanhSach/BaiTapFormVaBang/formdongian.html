@@ -4,11 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .formm {
+            font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+            border: 2px solid;
+            width: 400px;
+            margin-left: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+        .label {
+            text-align: right;
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        .trai{
+            text-align: left;
+        }
+
+        .form-title {
+            background-color: orangered;
+            color: white;
+        }
+        .gangphu{color: green;}
+        </style>
 </head>
 <body>
-    <form>
-        <h4>SỞ THÍCH CỦA BẠN</h4>
-        Họ và tên: <input type="textbox" name="yourname" size="20"/>
+    <form method="GET" class="formm">
+        <h4 class="form-title">SỞ THÍCH CỦA BẠN</h4>    
+        
+    <table>
+        <tr>
+            <td class="label">Họ và tên</td>
+            <td class="trai"><input type="textbox" name="yourname" size="20"/></td>
+        </tr>
+        <tr>
+            <td class="label">Email</td>
+            <td class="trai"><input type="textbox" name="email" size="20"/></td>
+        </tr>
+        <tr>
+            <td class="label">Sở thích</td>
+            <td class="trai">
+                <table class="bangphu">
+
+                    <tr>
+                        <td><label><input name="hobby" value="tt" type="checkbox"/>thể thao</label></td>
+                        <td><label><input name="hobby" value="am" type="checkbox"/>âm nhạc</label></td>
+                        <td><label><input name="hobby" value="ds" type="checkbox"/>đọc sách</label><br/></td>
+                    </tr>
+                    <tr>
+                        <td><label><input name="hobby" value="lw" type="checkbox"/>lướt web</label></td>
+                        <td><label><input name="hobby" value="cg" type="checkbox"/>chơi game</label></td>
+                        <td><label><input name="hobby" value="đa" type="checkbox"/>điện ảnh</label><br/></td>
+                    </tr>
+                    <tr>
+                        <td><label><input name="hobby" value="dl" type="checkbox"/>du lịch</label><br/></td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>             
+                
+            </td>     
+                
+         </tr>
+        <td></td>
+        <td class="trai"><label><input type = "button" name="SubmitForm" value="Gửi thông tin"/></label>
+            <label><input type = "reset" name="reset" value="nhập lại"/></label></td>
+        </tr>
+    </table>
     </form>
+    <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+    <table>
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="textbox" name="yourname" size="20"/></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="textbox" name="yourname" size="15"/></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td><label><input name="hobby" value="Nam" type="checkbox"/> Nam</label>
+                <label><input name="hobby" value="Nữ" type="checkbox"/> Nữ</label>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><textarea cols="50" rows="4"></textarea></td>
+        </tr>
+        <tr>
+            <td>Lớp</td>
+            <td><select>
+                <option value="Chọn lớp"> Chọn lớp</option>
+                <option value="Jv">Java</option>
+                <option value="PHP">PHP</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="textbox" name="email" size="18"/></td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="textbox" name="phone" size="18"/></td>
+        </tr>
+    </tr>
+        <td></td>
+        <td> <label><input type = "button" name="SubmitForm" value="Đăng ký"/></label>
+        <label><input type = "reset" name="reset" value="nhập lại"/></label></td>
+    </tr>
+    </table>
 </body>
 </html>
