@@ -1,0 +1,49 @@
+.calendar {
+    width: 60%;
+    height: 400px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.b-red {
+    background-color: red;
+}
+
+.f-red {
+    color: red;
+}
+
+.title {
+    background-color: orange;
+    color: white;
+}
+
+.b-blu {
+    background-color: blue;
+}
+
+.f-blu {
+    color: blue;
+}
+
+.calendar td {
+    border: 1px solid slategrey;
+    text-align: center;
+}
+
+.title th {
+    border: 1px solid white;
+}
+
+.calendar td span {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.f-nho th {
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+}
