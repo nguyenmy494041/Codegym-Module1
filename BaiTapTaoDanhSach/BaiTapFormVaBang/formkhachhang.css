@@ -1,0 +1,13 @@
+p{font-weight: bold;}
+table th{text-align: left;
+border: 1px solid slategrey;
+}
+table td{text-align: center;border: 1px solid slategrey;
+    border-collapse: collapse;}
+table{border: 1px solid slategrey;
+border-collapse: collapse;
+table-layout: fixed;
+width: 62%;}
+table tr:nth-child(odd){background-color: rgb(186, 197, 206);}
+table tr:nth-child(even){background-color: white;}
+table tr th{width: 100px;}
