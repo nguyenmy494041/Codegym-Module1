@@ -1,0 +1,14 @@
+var inputWidth = prompt("Enter the width");
+var inputHeight = prompt("Enter the height");
+var width = parseInt(inputWidth);
+document.write("Enter width:");
+document.write("<br/>");
+document.write(width);
+document.write("<br/>");
+var height = parseInt(inputHeight);
+document.write("Enter height:");
+document.write("<br/>");
+document.write(height);
+document.write("<br/>");
+var area = width * height;
+document.write("The area is: " + area);
