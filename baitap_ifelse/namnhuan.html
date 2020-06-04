@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="ketqua"></h3>
+    <script>
+        nam = prompt("Nhập năm vào");
+        let year = parseInt(nam);
+        if ((((year % 4) == 0) && ((year % 100) != 0)) || (year % 400) == 0)
+        {document.getElementById("ketqua").innerHTML= year + " là năm nhuận"}
+        else { document.getElementById("ketqua").innerHTML= year + " không phải là năm nhuận"}
+
+    </script>
+</body>
+</html>
