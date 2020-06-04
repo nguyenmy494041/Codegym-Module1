@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="ketqua"></h3>
+    <script>
+        let c_cao = +prompt("Nhập chiều cao(đơn vị m)");
+        let c_nang = +prompt("Nhập cân nặng: ");
+        let chiso = c_nang /(Math.pow(c_cao,2));
+        if (chiso>=30.0){
+            document.getElementById("ketqua").innerHTML="Obese";
+        }
+        else { if (chiso>=25.0)
+            {
+                document.getElementById("ketqua").innerHTML="Overweight";
+             }
+                else { if (chiso>=18.5)
+                           {
+                            document.getElementById("ketqua").innerHTML="Normal";
+                            }
+                       else{
+                             document.getElementById("ketqua").innerHTML="Underwweight";
+                           }
+                     }
+             }
+    </script>
+</body>
+</html>
