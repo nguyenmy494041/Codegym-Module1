@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="ketqua"></h3>
+    <script>
+        let inputname = prompt("Nhập tên người dùng: ");
+        if (inputname == "Admin"){
+                                    let inputpassword = prompt("Nhập password");
+                                    if (inputpassword == "TheMaster")
+                                    {document.getElementById("ketqua").innerHTML="Welcome";}
+                                    else { if (inputpassword == "null")
+                                            {document.getElementById("ketqua").innerHTML= "Canceled";}
+                                           else {document.getElementById("ketqua").innerHTML="Wrongpassword";} 
+                                    }
+        }
+        else { if (inputname == "null"){
+                    document.getElementById("ketqua").innerHTML="Cancel";
+        }
+                else {document.getElementById("ketqua").innerHTML="I don't know you";}
+        
+        }
+    </script>
+</body>
+</html>
