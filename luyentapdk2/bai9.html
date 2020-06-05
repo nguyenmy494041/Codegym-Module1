@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let a = +prompt("nhập vào số a");
+        let b = +prompt("nhập vào số b");
+        let c = +prompt("nhập vào số c"), x ;
+        if (((a+b)>c) && ((b+c)>a) && ((a+c)>b))
+         {x = " 3 số trên là 3 cạnh của 1 tam giác";}
+        else { x = "3 số trên không phải là độ dài của 1 tam giác";}
+        document.getElementById("hienthi").innerHTML= x;
+    </script>
+</body>
+</html>

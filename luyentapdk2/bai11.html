@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let thunhap = +prompt("Nhập số tiền thu nhập");
+        function thuesuat(a){
+            if (a>50000000) {return 8.5}
+               else if (a>30000000) { return 6}
+                    else if (a>15000000) {return 4.5}
+                        else {return 2.8}
+        }
+        let thue = thunhap * thuesuat(thunhap) / 100;
+        document.getElementById("hienthi").innerHTML= "Thuế thu nhập cá nhân là:  "+ thue+ "  VND";
+    </script>
+</body>
+</html>

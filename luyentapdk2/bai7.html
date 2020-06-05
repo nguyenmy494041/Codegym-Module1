@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let a = +prompt("nhập hệ số a");
+        let b = +prompt("nhập hệ số b");
+        let c = +prompt("nhập hệ số c");
+        let x, x_1, x_2;
+        const m = "Phương trình vô nghiệm";
+        let d = b*b - 4*a*c;
+        if ((a==0) && (b==0) && (c==0)) { x = "Phương trình có vô số nghiệm"};
+        if ((a==0) && (b==0) && (c!=0)) { x = m};
+        if ((a==0) &&( b!=0)) { x = "Phương trình có nghiệm duy nhất x = "+ -c/b };
+        if ((a!=0) && (d<0)) { x = m};
+        if ((a!=0) && (d==0)) { x = "Phương trình có nghiệm kép x = "+ -b/(2*a)};
+        if ((a!=0) && (d>0)) { x_1 = (-b + Math.sqrt(d))/(2*a);
+                             x_2 = (-b - Math.sqrt(d))/(2*a);
+                             x = "Phương trình có 2 nghiệm:  x_1 = "+ x_1+" ;   x_2 =  "+ x_2;
+                           }
+        document.getElementById("hienthi").innerHTML = x;
+    </script>
+</body>
+</html>

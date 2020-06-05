@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+   <script>
+       let chiso = +prompt("nhập vào chỉ số điện");
+       const muc1 =1678; // cho kWh từ 0-50.
+       const muc2 = 1734; // cho kWh từ 51-100.
+       const muc3 = 2014; // cho kWh từ 101-200.
+       const muc4 = 2536; // cho kWh từ 201-300.
+       const muc5 = 2834; // cho Kwh từ 301-400.
+       const muc6 = 2927; // cho kWh từ 401 trở đi.
+       if (chiso > 400) {x = (chiso-400)*muc6+909000}// 909000 là tiền điện 400 KWh đầu tiên.
+          else if (chiso>300) {x = (chiso-300)*muc5 + 625600}// 625600 là tiền điện 300 kWh đầu tiên.
+               else if (chiso >200) {x = (chiso-200)*muc4+ 372000} // 372000 là tiền điện 200 kWh đầu
+                    else if (chiso>100) {x = (chiso-100)*muc3+170600}
+                         else if (chiso>50){x= (chiso-50)*muc2 + 83900}
+                              else {x = chiso*muc1};
+        document.getElementById("hienthi").innerHTML= "Tiền điện phải trả là "+x+ " VND";
+
+   </script> 
+</body>
+</html>

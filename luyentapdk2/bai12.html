@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let money = +prompt("Nhập số tiền gửi:");
+        let month = +prompt("Nhập số tháng gửi: ");
+        let r = +prompt("Nhập lãi suất hàng tháng");
+        let A = (money * Math.pow((1 + r/100),month))-money;
+        A = Math.round(A/1000)*1000;
+        document.getElementById("hienthi").innerHTML= "Tiền lãi là  "+A+ "  VND";
+    </script>
+</body>
+</html>

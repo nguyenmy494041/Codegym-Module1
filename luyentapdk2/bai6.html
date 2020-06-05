@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let a = +prompt("nhập hệ số a");
+        let b = +prompt("nhập hệ số b");
+        let x;
+        if (a==0){if (b == 0){x ="Phương trình có vô số nghiệm";}
+                 else { x = "Phương trình vô nghiệm";}
+        }
+        else {
+            x = "Phương trình có nghiệm duy nhất x = "+ -b/a}
+        document.getElementById("hienthi").innerHTML= x;
+    </script>
+</body>
+</html>
