@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hienthi"></p>
+    <script>
+        let sl =+prompt("số lượng sản phẩm bán được");
+        let don_gia =+prompt("giá 1 sảm phẩm");
+        let e = (sl>=2000) ? 12 :
+                (sl>=1500) ? 9 :
+                (sl>=1000) ? 7 :
+                (sl>=500) ? 5: 3;
+        let hoahong = sl * e * don_gia / 100;
+        document.getElementById("hienthi").innerHTML= 
+        "Bán được "+sl+" thì nhận được "+hoahong+" tiền hoa hồng";
+       </script>
+</body>
+</html>

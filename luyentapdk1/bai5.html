@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="hienthi"></h3>
+    <script>
+        let kt_1 = +prompt("nhập điểm kiểm tra lần 1");
+        let kt_2 = +prompt("nhập điểm kiểm tra lần 2");
+        let kt_3 = +prompt("nhập điểm kiểm tra lần 3");
+        let kt_gk = +prompt("nhập điểm kiểm tra giữa kỳ");
+        let kt_ck = +prompt("nhập điểm kiểm tra cuối kỳ");
+        let diemTB= (kt_1 + kt_2 + kt_3 + 2 * kt_gk + 3 * kt_ck)/8;
+
+        let e = (diemTB > 8.0)?"Giỏi":
+                (diemTB > 6.5)?"Khá":
+                (diemTB > 5.0)?"Trung Bình":
+                (diemTB > 4.0)?"Yếu":"Kém";
+        document.getElementById("hienthi").innerHTML=
+        "Điểm trung bình là "+ diemTB+" xếp loại học lực "+ e;
+    </script>
+</body>
+</html>

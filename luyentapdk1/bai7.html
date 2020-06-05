@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 50px;
+        }
+        th{ text-align: left;}
+    </style>
+</head>
+<body>
+    <table style="text-align: left; width: 600px;">
+        <tr>
+            <th style="width:300px;">Chi tiết cước</th>
+            <th>Số lượng</th>
+            <th>Cước phí</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Cước gọi nội mạng trong nước</td>
+            <td><input type="number" id="goinoi"></td>
+            <td><input type="number" id="phutnoi"></td>
+            <td>VND/phut</td>
+        </tr>
+        <tr>
+            <td>Cước gọi liên mạng trong nước</td>
+            <td><input type="number" id="goingoai"></td>
+            <td><input type="number" id="phutngoai"></td>
+            <td>VND/phut</td>
+        </tr>
+        <tr>
+            <td>Cước SMS nội mạng trong nước</td>
+            <td><input type="number" id="SMSnoi"></td>
+            <td><input type="number" id="noi"></td>
+            <td>VND/SMS</td>
+        </tr>
+        <tr>
+            <td>Cước SMS liên mạng trong nước</td>
+            <td><input type="number" id="SMSngoai" value="8"></td>
+            <td><input type="number" id="ngoai" value="5"></td>
+            <td>VND/SMS</td>
+        </tr>
+        <tr>
+            <td>Cước gọi quốc tế</td>
+            <td><input type="number" id="goiquocte"></td>
+            <td><input type="number" id="phutquocte"></td>
+            <td>VND/phut</td>
+        </tr>
+        <tr>
+            <td>Cước SMS quốc tế</td>
+            <td><input type="number" id="SMSquocte"></td>
+            <td><input type="number" id="quocte"></td>
+            <td>VND/SMS</td>
+        </tr>        
+    </table>
+        <input type="button" onclick="tongtiencuoc()" value="Tính tiền cước" width="200px">
+    
+    <p id="hienthi"></p>    <script src="bai7.js"></script>
+</body>
+</html>
