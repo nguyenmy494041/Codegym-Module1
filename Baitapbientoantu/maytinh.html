@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+<h1 style="font-weight: bold;">calculator</h1>
+<input type="text",name=ketqua1 , id="a1"> 
+<input type="text",name=ketqua2 , id="a2"> <br>
+<input type="button" onclick="hamcong()" name="phepcong", value="addition(+)">
+<input type="button" onclick="hamtru()" name="pheptru", value="subtraction(-)">
+<input type="button"onclick="hamnhan()" name="phepnhan", value="Multiplication(x)">
+<input type="button"onclick="hamchia()" name="phepchia", value="Division(/)">
+</form>
+<script>
+    function hamcong(){
+    let a= +document.getElementById("a1").value;
+    let b= +document.getElementById("a2").value;  
+    let c=parseInt(a)
+    let d=parseInt(b)
+    let e=c+d
+    alert('ket qua la'+ e)
+    }
+    function hamtru(){
+    let a= +document.getElementById("a1").value;
+    let b= +document.getElementById("a2").value;  
+    let c=parseInt(a)
+    let d=parseInt(b)
+    let e=c-d
+    alert('ket qua la'+ e)
+    }
+    function hamnhan(){
+    let a= +document.getElementById("a1").value;
+    let b= +document.getElementById("a2").value;  
+    let c=parseInt(a)
+    let d=parseInt(b)
+    let e=c*d
+    alert('ket qua la'+ e)
+    }
+    function hamchia(){
+    let a= +document.getElementById("a1").value;
+    let b= +document.getElementById("a2").value;  
+    let c=parseInt(a)
+    let d=parseInt(b)
+    let e=c/d
+    alert('ket qua la'+ e)
+    }
+</script>
+</body>
+</html>
