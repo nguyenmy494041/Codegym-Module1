@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body onload="docready()">
+    <img src="chuot.png" alt="hinhchuot" id="chuot" width="80">
+    <script>
+        var hinh = document.getElementById("chuot");
+        hinh.style.position = 'relative';
+        hinh.style.left ="300px";
+        hinh.style.top = "150px";
+        function totop() {
+            let hinh = document.getElementById("chuot");
+            hinh.style.top = parseInt(hinh.style.top) - 10 + "px";
+        }
+        function tobottom() {
+            let hinh = document.getElementById("chuot");
+            hinh.style.top = parseInt(hinh.style.top) + 10 + "px";
+        }
+        function toright() {
+            let hinh = document.getElementById("chuot");
+            hinh.style.left = parseInt(hinh.style.left) + 10 + "px";
+        }
+        function toleft() {
+            let hinh = document.getElementById("chuot");
+            hinh.style.left = parseInt(hinh.style.left) - 10 + "px";
+        }
+        function tomove(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                case 100:
+                    toleft();
+                    break;
+                case 39:
+                case 102:
+                    toright();
+                    break;
+                case 38:
+                case 104:
+                    totop();
+                    break;
+                case 40:
+                case 98:
+                    tobottom();
+                    break;
+            }
+        }
+        function docready() {
+            window.addEventListener("keydown", tomove);
+        }
+    </script>
+</body>
+</html>

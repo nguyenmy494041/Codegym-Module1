@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính cơ bản</title>
+    <style>
+        .mhinh {
+            width: 176px;
+            height: 35px;
+            text-align: right;
+            font-size: larger;
+            color: blue;
+        }
+
+        input {
+            width: 35px;
+            height: 35px;
+            color: darkblue;
+        }
+        table {
+            text-align: center;
+            border: 4px solid black;
+            width: 200px;
+            height: 250px;
+            color: blue;
+         }
+         
+    </style>
+</head>
+
+<body>
+    <table >
+        <tr>
+            <th colspan="4"><input type="text" id="display" value="0" class="mhinh" readonly></th>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" class="number"></td>
+            <td><input type="button" value="2" class="number"></td>
+            <td><input type="button" value="3" class="number" onclick="display.value"></td>
+            <td><input type="button" value="+" class="operation"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" class="number"></td>
+            <td><input type="button" value="5" class="number"></td>
+            <td><input type="button" value="6" class="number"></td>
+            <td><input type="button" value="-" class="operation"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" class="number"></td>
+            <td><input type="button" value="8" class="number"></td>
+            <td><input type="button" value="9" class="number"></td>
+            <td><input type="button" value="*" class="operation"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" id="refresh"></td>
+            <td><input type="button" value="0" class="number"></td>
+            <td><input type="button" value="=" id="equal" ></td>
+            <td><input type="button" value="/" class="operation"></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        let number_objs = document.getElementsByClassName("number");
+        let operation_objs = document.getElementsByClassName("operation");
+        let equal = document.getElementById("equal");
+        let refresh = document.getElementById("refresh");
+        // let display = document.getElementById('display');
+
+        function clickRefresh() {
+            display.value = 0;
+        }
+
+        function clickEqual() {
+            display.value = eval(display.value);
+        }
+
+        function expression() {
+            if (display.value == 0) {
+                console.log(this.value);
+                if (this.value != "*" && this.value != "/") {
+                    display.value = this.value;
+                }
+            } else {
+                display.value += this.value;
+                console.log(this.value);
+            }
+        }
+
+        function docReady() {
+            for (var i = 0; i < number_objs.length; i++) {
+                number_objs[i].addEventListener("click", expression);
+            };
+            for (var i = 0; i < operation_objs.length; i++) {
+                operation_objs[i].addEventListener("click", expression);
+            };
+            equal.addEventListener("click", clickEqual);
+            refresh.addEventListener("click", clickRefresh);
+      
+        }
+
+        window.onload = docReady;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <img src="chuot.png" alt="hinhconchuot" id="chuot">
+        <p>Click button below to move the image to left</p>
+        <input type="button" onclick=toleft() value="Click Me">
+    </form>
+    <script>
+        var hinh = document.getElementById("chuot");
+        function init() {
+            let hinh = document.getElementById("chuot");
+            hinh.style.right = 0 + "px";
+        }
+        function toleft() {
+            hinh.style.right = parseInt(hinh.style.right) + 10 + "px";
+        }
+        window.onload = init;
+    </script>
+</body>
+
+</html>
