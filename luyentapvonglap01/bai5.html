@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     let b=1;
+    //     let sum = 0;
+    //   const a = (1 + Math.sqrt(5))/2;
+    //   for (let i =1; i<=20;i++) {
+    //       b = (Math.pow(a,i)-Math.pow((1-a),i))/(Math.sqrt(5));
+    //       b = Math.round(b);
+    //       sum += b;
+    //   }
+    //   document.write(" Tổng của 20 số đầu tiên trong dãy fibonacci là "+sum);
+    let a = 1;
+    let b = 1;
+    let sum = a + b;
+    let count = 3;
+    while (count <= 20) {
+        let c = a + b;
+        sum += c;
+        a = b;
+        b = c;
+        count++;
+    }
+document.write(` Tổng 20 số đầu tiên trong dãy fibonacci là:  ${sum}`);
+    </script>
+</body>
+</html>

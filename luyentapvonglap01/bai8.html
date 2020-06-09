@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <input type="button" onclick="doan()" value="Chơi đoán số">
+    <p id="result"></p>
+    <script>
+
+        function TaoSoNgauNhien(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function doan() {
+            let a = +prompt("nhập giá trị Min:");
+            let b = +prompt('Nhập giá trị Max');
+            let c = TaoSoNgauNhien(a, b);
+            let d = +prompt("Nhập số người chơi dự đoán");
+            let count = 1;
+            while (count < 3) {
+                if (c != d) {
+                    d = +prompt("Chưa đúng, đoán lại: ")
+                }
+                else {
+                    document.getElementById('result').innerHTML = ` Bạn đoán đúng`;
+                    break;
+                }
+                count++;
+                if (count === 3) {
+                    document.getElementById('result').innerHTML = ` Bạn đoán sai`;
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
