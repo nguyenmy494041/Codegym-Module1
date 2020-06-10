@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array1 = ["array","table","run","go","help","selection"];
+        var array2 = ["mảng","bảng","chạy", "đi", "giúp đỡ","lựa chọn"];
+        var a = prompt("nhập từ cần tra nghĩa: ");
+        for (let i =0; i < array1.length; i++) {
+            if (a == array1[i]) {
+                document.write(`${a} có nghĩa là: ${array2[i]}`);
+break;
+            }
+            if ( i == array1.length -1) {
+                document.write(` Không tìm thấy từ ${a} trong từ điển`)
+            }
+        }
+    </script>
+</body>
+</html>
