@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("nhập chiêù rộng:");
+        let b = +prompt("nhập chiều cao");
+        let sout = "<table>" + "<tr>";
+        for (let i = 1; i <= a; i++) {
+            sout += "<td>" + "*" + "</td>";
+        }
+        sout += "</tr>";
+        for (i = 1; i <=b-2; i++) {
+            sout += "<tr>"+"<td>"+"*"+"</td>";
+                for (let j =1; j <= a-2;j++) {
+                    sout += "<td>" + "</td>";
+                }
+                sout += "<td>"+"*"+"</td>"+"</tr>";
+        }
+         sout+= "<tr>";
+            for (let i = 1; i <= a; i++) {
+            sout += "<td>" + "*" + "</td>";
+        }
+        sout += "</tr>"+ "</table>";
+        document.write(sout);
+
+    </script>
+</body>
+
+</html>

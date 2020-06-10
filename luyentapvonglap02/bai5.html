@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("Nhập vào số tiền muốn gửi:");
+        let month = +prompt("Nhập vào số tháng gửi:");
+        let r = +prompt("Nhập vào lãi suất hàng tháng:");
+        let money = number;
+        for ( let i =1; i <= month; i++) {
+            money = money + money * r /100;
+        }
+        let lai = Math.round( (money - number)/1000)*1000;
+        document.write(` Tiền lãi là ${lai} `);
+    </script>
+</body>
+
+</html>

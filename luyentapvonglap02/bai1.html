@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("Nhập vào số phần tử của dãy");
+        let count = 3;
+        let a = 1;
+        let b = 1;
+        document.write(a + " " + b + " ");
+        while (count <= number) {
+            let c = a + b;
+            document.write(c + " ");
+            a = b;
+            b = c;
+            count++;
+        }
+
+    </script>
+</body>
+
+</html>
