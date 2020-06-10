@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = ["Ronaldo", "Messi", "Kaka", "Figo", "Henry", "Pele"];
+        let i = 0;
+        let j = array.length - 1;
+        document.write(`ban đầu là mảng:  ${array} <br><br>`)
+        while (i < j) {
+            let bienao = array[i];
+            array[i] = array[j];
+            array[j] = bienao;
+            i++;
+            j--
+        }
+        document.write(` Sau khi đổi là mảng:  ${array}`);
+    </script>
+</body>
+
+</html>
