@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+</head>
+
+<body>
+    <script>
+        var chuoi = prompt(" Nhập vào chuỗi: ")
+        var mang = [];
+        for (i = 0; i < chuoi.length; i++) {
+            mang.push(chuoi[i]);
+        }
+        document.write(` Mảng: ${mang} có kích thước là: ${mang.length} <br><br>`);
+        var number = "0123456789";
+        var count = 0;
+        for (i = 0; i < mang.length; i++) {
+            if (number.indexOf(mang[i]) !== -1) {
+                count++;
+            }
+        }
+        document.write(` Mảng trên có ${count} kí tự số`);
+    </script>
+</body>
+
+</html>
