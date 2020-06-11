@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var mang = ["thích", "-xem bóng đá", "-", "-không biết chơi", "-đá bóng"];
+        for (i = 0; i < mang.length; i++) {
+            mang[i] = mang[i].split("")
+            for (j = 0; j < mang[i].length; j++) {
+                if (mang[i][j] == "-") {
+                    mang[i][j] = "_";
+                }
+            }
+            mang[i] = mang[i].join('')
+        }
+        document.write(mang)
+        // document.write(mang);
+    </script>
+</body>
+
+</html>

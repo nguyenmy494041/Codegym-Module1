@@ -47,32 +47,40 @@
             mang[positionX][positionY] = "O";
             display();
             hang();
+            cheo();
         }
         function hang() {
 
             for (i = 0; i < 10; i++) {
                 for (j = 0; j < 8; j++) {
                     if ((mang[i][j] == mang[i][j + 1]) && (mang[i][j] == mang[i][j + 2])
-                        && (mang[i][j] !== ".") || (mang[i][j] == mang[i + 1][j]) && (mang[i][j] == mang[i + 2][j])
                         && (mang[i][j] !== ".")) {
                         document.write(`trò chơi kết thúc`);
                     }
                 }
             }
-
+            for (i = 0; i < 8; i++) {
+                for (j = 0; j < 10; j++) {
+                    if ((mang[i][j] == mang[i + 1][j]) && (mang[i][j] == mang[i + 2][j])
+                        && (mang[i][j] !== ".")) {
+                        document.write(`trò chơi kết thúc`);
+                    }
+                }
+            }
         }
         function cheo() {
             for (i = 0; i < 8; i++) {
                 for (j = 0; j < 8; j++) {
-                    if ((mang[i][j] == mang[i + 1][j + 1]) && (mang[i][j] == mang[i + 2][j + 2])
-                        && (mang[i][j] !== ".") || (mang[i][j + 2] == mang[i + 1][j + 1]) && (mang[i + 2][j] == mang[i][j + 2])
+                    if ((mang[i][j] == mang[i + 1][j + 1])
+                        && (mang[i][j] == mang[i + 2][j + 2])
+                        && (mang[i][j] !== ".")
+                        || (mang[i][j + 2] == mang[i + 1][j + 1]) && (mang[i + 2][j] == mang[i][j + 2])
                         && (mang[i + 1][j + 1] !== ".")) {
                         document.write(`trò chơi kết thúc`);
                     }
                 }
             }
         }
-    //  hang();
     </script>
 </body>
 

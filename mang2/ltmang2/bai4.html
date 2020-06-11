@@ -10,10 +10,14 @@
 <body>
     <script>
         var chuoi = prompt("Nhập chuỗi: ");
-        var count = 1;
-        for (i = 0; i < chuoi.length; i++) {
-            if (chuoi[i] == " ")
+        chuoi = chuoi.trim();
+        var count = 1; var a = 0; var b = 0;
+        for (i = 1; i < chuoi.length - 1; i++) {
+            if (chuoi[i] == " " && chuoi[i + 1] != " ") {
+                count++;
+            }
         }
+        document.write(`Chuỗi có ${count} từ`);
     </script>
 </body>
 
