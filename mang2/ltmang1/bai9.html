@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Taomang() {
+            var count = 1;
+            var array = [];
+
+            const TaoSoNgauNhien = function (min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            array.push(TaoSoNgauNhien(-10, 10));
+            while (count < 10) {
+                let x = TaoSoNgauNhien(-10, 10);
+                let check = true;
+                for (i = 0; i < array.length; i++) {
+                    if (x == array[i]) {
+                        check = false;
+                    }
+                }
+                if (check) {
+                    array.push(x);
+                    count++;
+                }
+            }
+            return array
+        }
+        var mang1 = Taomang();
+        var mang2 = Taomang();
+        document.write("Mảng 1: " + mang1 + "<br>");
+        document.write("Mảng 2: " + mang2 + "<br>");
+        var mang3 = mang1.concat(mang2);
+        document.write("Mảng sau khi nối: " + mang3 + "<br>");
+    </script>
+</body>
+
+</html>

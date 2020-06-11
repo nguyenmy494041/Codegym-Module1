@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Taomang() {
+            var count = 1;
+            var array = [];
+
+            const TaoSoNgauNhien = function (min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            array.push(TaoSoNgauNhien(-10, 10));
+            while (count < 10) {
+                let x = TaoSoNgauNhien(-10, 10);
+                let check = true;
+                for (i = 0; i < array.length; i++) {
+                    if (x == array[i]) {
+                        check = false;
+                    }
+                }
+                if (check) {
+                    array.push(x);
+                    count++;
+                }
+            }
+            return array
+        }
+        var adf = Taomang();
+        document.write(` Mảng vừa tạo là: ${adf}<br><br>`);
+        var V = +prompt("Nhập giá trị cần kiểm tra");
+        document.write(` số cần kiểm tra là ${V}<br><br>`)
+        for (i = 0; i < 10; i++) {
+            if (V == adf[i]) {
+                for (let b = i; b < 9; b++) {
+                    adf[b] = adf[b + 1];
+                }
+                adf[9] = 0;
+            }
+        }
+        document.write(` Mảng thu được sau kiểm tra ${adf}`)
+    </script>
+</body>
+
+</html>

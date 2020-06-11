@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var number = +prompt("Nhập vào độ dài của mảng:");
+        // var a = +prompt("nhập a");
+        // var b = +prompt("nhập b");
+        var count = 0;
+        var array = [];
+        function TaoSoNgauNhien(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        while (count < number) {
+            array.push(TaoSoNgauNhien(-100, 100));
+            count++;
+        }
+        document.write(` Mảng vừa tạo là: ${array}<br><br>`);
+        array.reverse();
+        document.write(` Mảng sau khi đảo chiều là: ${array}`);
+
+    </script>
+</body>
+
+</html>

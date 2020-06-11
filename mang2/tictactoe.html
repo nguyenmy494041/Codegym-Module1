@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Caro Game Simple</h3>
+    <p id="caro"></p>
+    <input type="button" onclick="nguoichoi1()" value="Người chơi 1">
+    <input type="button" onclick="nguoichoi2()" value="Người chơi 2">
+    <script>
+        var mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = [".", ".", ".", ".", ".", ".", ".", ".", ".", "."];
+        }
+        let b = document.getElementById("caro");
+        let data;
+        function display() {
+            data = "";
+            for (let i = 0; i < 10; i++) {
+                for (let j = 0; j < 10; j++) {
+                    data += mang[i][j] + "&nbsp;&nbsp;&nbsp;";
+                }
+                data += "<br/>";
+            }
+            b.innerHTML = data;
+        }
+        display();
+
+        function nguoichoi1() {
+            let positionX = prompt("X: ");
+            let positionY = prompt("Y: ");
+            data = "";
+            mang[positionX][positionY] = "X";
+            display();
+            hang();
+            cheo();
+        }
+        function nguoichoi2() {
+            let positionX = prompt("X: ");
+            let positionY = prompt("Y: ");
+            data = "";
+            mang[positionX][positionY] = "O";
+            display();
+            hang();
+        }
+        function hang() {
+
+            for (i = 0; i < 10; i++) {
+                for (j = 0; j < 8; j++) {
+                    if ((mang[i][j] == mang[i][j + 1]) && (mang[i][j] == mang[i][j + 2])
+                        && (mang[i][j] !== ".") || (mang[i][j] == mang[i + 1][j]) && (mang[i][j] == mang[i + 2][j])
+                        && (mang[i][j] !== ".")) {
+                        document.write(`trò chơi kết thúc`);
+                    }
+                }
+            }
+
+        }
+        function cheo() {
+            for (i = 0; i < 8; i++) {
+                for (j = 0; j < 8; j++) {
+                    if ((mang[i][j] == mang[i + 1][j + 1]) && (mang[i][j] == mang[i + 2][j + 2])
+                        && (mang[i][j] !== ".") || (mang[i][j + 2] == mang[i + 1][j + 1]) && (mang[i + 2][j] == mang[i][j + 2])
+                        && (mang[i + 1][j + 1] !== ".")) {
+                        document.write(`trò chơi kết thúc`);
+                    }
+                }
+            }
+        }
+    //  hang();
+    </script>
+</body>
+
+</html>

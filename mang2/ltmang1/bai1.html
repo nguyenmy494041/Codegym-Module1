@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 0;
+        var array = [];
+        while (i < 10) {
+            a = +prompt("Nhập số nguyên vào mảng:");
+            array.push(a);
+            i++;
+        }
+        document.write(` Mảng vừa tạo gồm 10 số: ${array} <br><br>`);
+        let count = 0;
+        a = "";
+        for (i = 0; i < 10; i++) {
+
+            if (array[i] > 10) {
+                count++;
+                a += ` ${array[i]} ; `;
+            }
+        }
+        document.write(` Trong dãy trên có ${count} số lơn hơn 10 là: ${a} `);
+    </script>
+
+</body>
+
+</html>

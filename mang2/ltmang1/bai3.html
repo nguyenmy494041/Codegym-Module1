@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number = +prompt("nhập độ dài mảng: ");
+        var i = 0;
+        var array = [];
+       
+        while (i < number) {
+            a = +prompt("Nhập số nguyên vào mảng:");
+            array.push(a);
+            i++;
+        }
+        document.write(` Mảng vừa tạo gồm ${number} số: ${array} <br><br>`);
+        let max = array[0];
+        var sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum += array[i];
+            if (max < array[i]) {
+                max = array[i];
+                            }
+        }
+        var TB = (sum / number).toFixed(2);
+        document.write(` Số lớn nhất trong mảng là ${max} <br>
+        Giá trị trung bình là: ${TB}`);
+    </script>
+</body>
+</html>

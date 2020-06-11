@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 0;
+        var array = [];
+        while (i < 10) {
+            a = +prompt("Nhập số nguyên vào mảng:");
+            array.push(a);
+            i++;
+        }
+        document.write(` Mảng vừa tạo gồm 10 số: ${array} <br><br>`);
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                b = i;
+            }
+        }
+        document.write(` Số lớn nhất trong mảng là ${max} nằm ở vị trí thứ ${b} trong mảng`);
+    </script>
+</body>
+
+</html>

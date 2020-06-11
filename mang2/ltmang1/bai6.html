@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="button" onclick="Taomang()" value="Tạo mảng"> -->
+    <script>
+        // function Taomang() {
+            var count = 0;
+        var array = [];
+        function TaoSoNgauNhien(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        while (count < 10) {
+            array.push(TaoSoNgauNhien(-10, 10));
+            count++;
+        }
+        document.write(` Mảng vừa tạo là: ${array}<br><br>`);
+        // }
+        var V = +prompt("Nhập giá trị cần kiểm tra");
+        for ( i =0; i<10;i++) {
+            if (V == array[i]) {
+              document.write(` V is in the array`); break;
+              
+            } if (i == 9) {document.write(` V is not in the array`);}
+        }
+    </script>
+</body>
+</html>
