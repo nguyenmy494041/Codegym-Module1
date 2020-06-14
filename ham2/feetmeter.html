@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p> <label>Meters</label>
+        <input type="number" placeholder="Meters" oninput="toFeet(this.value)" onchange="toFeet(this.value)">
+    </p>
+    <p>
+        <label>toFeet: </label>
+        <span id="tofeet"></span>
+    </p>
+    <hr style="width: 18%; margin: 0px;">
+
+    <p>
+        <label> Feet &nbsp &nbsp</label>
+        <input type="number" placeholder="Feet" oninput="toMeters(this.value)" onchange="toMeters(this.value)">
+    </p>
+    <p>
+        <label>toMeters:</label>
+        <span id="tometers"></span>
+    </p>
+
+    <script>
+        function toFeet(number) {
+            number = parseFloat(number);
+            document.getElementById("tofeet").innerHTML = (3.2808399 * number).toFixed(3);
+        }
+        function toMeters(number) {
+            number = parseFloat(number);
+            document.getElementById("tometers").innerHTML = (0.305 * number).toFixed(3);
+        }
+    </script>
+</body>
+
+</html>

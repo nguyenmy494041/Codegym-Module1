@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ktra(arr, str) {
+            count = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == str) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                count = -1;
+            }
+            return count;
+        }
+        function taoMang(chuoi) {
+            let arr = [];
+            for (let i = 0; i < chuoi.length; i++) {
+                arr[i] = chuoi[i];
+            }
+            return arr;
+        }
+        let chuoi = prompt("Nhâp chuỗi vào");
+        let str = prompt("Nhập kí tự cần kiểm tra: ")
+        let i = taoMang(chuoi);
+        let j = ktra(i, str);
+        if (j > 0) {
+            document.write(` số lần xuất hiện là ${j}`);
+        } else { document.write(`Không tìm thấy`) }
+
+    </script>
+</body>
+
+</html>

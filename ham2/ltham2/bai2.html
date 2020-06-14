@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function circumference(r) {
+            const pi = 3.1415926535;
+            circum = 2 * pi * r;
+            return circum;
+        }
+        function area(r) {
+            const pi = 3.1415926535;
+            s = r * r * pi;
+            return s;
+        }
+        let r = +prompt("Nhập vào bán kính đường tròn: ");
+        document.write(` Chu vi đường tròn là ${circumference(r).toFixed(3)} <br> Diện tích hình tròn là: ${area(r).toFixed(3)}`);
+    </script>
+</body>
+
+</html>

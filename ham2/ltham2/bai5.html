@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ktrannhat(a, b, c) {
+            if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)) {
+                if (a < b && a < c) {
+                    min = a
+                }
+                else if (b < c) {
+                    min = b
+                }
+                else {
+                    min = c
+                }
+            } else {
+                min = "tham số đầu vào chưa đúng";
+
+            } return min;
+        }
+        let a = +prompt("Nhập vào biến a");
+        let b = +prompt("Nhập vào biến b");
+        let c = +prompt("Nhập vào biến c");
+        document.write(ktrannhat(a, b, c));
+    </script>
+</body>
+
+</html>

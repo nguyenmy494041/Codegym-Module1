@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let chuoi = prompt("Nhập từ cần kiểm tra:");
+        function isPalindrome(str) {
+            let check = true;
+            let i = 0;
+            let j = str.length - 1;
+            while (i < j) {
+                if (str[i] != str[j]) {
+                    check = false;
+                } return check;
+                i++;
+                j--;
+            } return check;
+        }
+        let k = isPalindrome(chuoi);
+        document.write();
+        if (isPalindrome(chuoi)) {
+            document.write(`${chuoi} là chuỗi palindrome`)
+        }
+        else {
+            document.write(`${chuoi} là không phải chuỗi palindrome`)
+        }
+    </script>
+</body>
+
+</html>

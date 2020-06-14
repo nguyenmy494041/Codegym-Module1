@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function daoChieuMang(arr) {
+            check = true;
+            for (i = 0; i < arr.length; i++) {
+                if (Number.isInteger(arr[i]) == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) {
+                fisrt = 0;
+                last = arr.length;
+                while (fisrt < last) {
+                    b = array[fisrt];
+                    arr[fisrt] = arr[last];
+                    arr[last] = b;
+                    fisrt++;
+                    last--;
+                }
+                return arr;
+            }
+            else { return arr = "Mảng không đúng yêu cầu" }
+        }
+        let array = [2, 3, 54, 35, 21, 179];
+
+        document.write(daoChieuMang(array));
+    </script>
+</body>
+
+</html>

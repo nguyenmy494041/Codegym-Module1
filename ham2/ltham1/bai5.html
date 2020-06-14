@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function kiemTra(str) {
+            for (i = 0; i < ngoiSao.length; i++) {
+                if (str == ngoiSao[i]) {
+                    document.write(`${str} có chòm sao là ${chomSao[i]}`);
+                    break;
+                }
+                if (i == ngoiSao.length - 1) {
+                    document.write(` Không tìm thấy ${str}`);
+                }
+            }
+        }
+        let str = prompt("Nhập vào tên ngôi sao:");
+        kiemTra(str);
+    </script>
+</body>
+
+</html>
