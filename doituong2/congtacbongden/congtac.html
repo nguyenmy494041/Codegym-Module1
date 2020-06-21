@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class Congtac {
+        start; lamp;
+        constructor() {
+            this.start = false;
+            // this.lamp = lamp;
+        }
+        // swicthOn() {
+        //     return this.start = true;
+        // }
+        // swicthOff() {
+        //     return this.start = false;
+        // }
+        connectToLamp() {
+            return true;
+        }
+        isOn() { return status };
+        togbetMode() {
+            this.status = !this.status;
+        }
+    }
+    class Lamp {
+        start;
+        constructor() {
+            this.start = false;
+        }
+        turnOn() {
+            return this.start = true;
+        }
+        turnOff() {
+            return this.start = false;
+        }
+    }
+    function kiemtra(congtac, bongden) {
+        if (congtac.start == true && bongden.start == true && congtac.connectToLamp()) {
+            document.write(" Đèn sáng<br>");
+        } else {
+            document.write(" Đèn không sáng<br>")
+        }
+    }
+</script>
+
+<body>
+    <script>
+        var congtac = new Congtac();
+        var bongden = new Lamp();
+        bongden.turnOn();
+        function battat() {
+            let seft = this;
+            congtac.isOn();
+            kiemtra(congtac, bongden);
+            setTimeout(function () { seft.battat() }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 30px;
+            height: 30px;
+            background-color: deeppink;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame"></p>
+    <input type="button" value="người chơi X" onclick="changeValue('X')">
+    <input type="button" value="người chơi O" onclick="changeValue('O')">
+    <script>
+        let b = document.getElementById("carogame");
+        let check = true;
+        let board = [];
+        function createArray() {
+            for (let i = 0; i < 5; i++) {
+                board[i] = new Array("", "", "", "", "");
+            }
+        }
+        createArray();
+        drawTable();
+        function drawTable() {
+            let data = "<table>";
+            for (let i = 0; i < 5; i++) {
+                data += "<tr>";
+                for (let j = 0; j < 5; j++) {
+                    data += `<td onclick='changeValue(${i},${j});'> ${board[i][j]}</td>`;
+                }
+                data += "</tr>"
+            }
+            data += "</table>"
+            // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+            b.innerHTML = data;
+        }
+        function changeValue(positionX, positionY) {
+            let value;
+            if (check) {
+                value = 'O';
+            } else {
+                value = 'X'
+            }
+            board[positionX][positionY] = value;
+            check = !check;
+            drawTable();
+            checkWin(positionX, positionY);
+        }
+        function checkWin(positionX, positionY) {
+            if (board[positionX][positionY] === board[positionX][positionY + 1] && (board[positionX][positionY] === board[positionX][positionY + 2])
+                ||
+                board[positionX][positionY] === board[positionX][positionY - 1] && (board[positionX][positionY] === board[positionX][positionY - 2])) {
+                alert('bạn đã thắng rồi')
+            }
+        }
+    //  data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    </script>
+</body>
+
+</html>

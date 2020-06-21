@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class Apple {
+        weigh;
+        constructor() {
+            this.weigh = 10;
+        }
+        getWeigh() {
+            return this.weigh;
+        }
+        giam() {
+            if (this.weigh > 0) {
+                this.weigh = this.weigh - 1;
+            }
+            return this.weigh;
+        }
+        kiemtratao() {
+            return this.weigh != 0;
+        }
+    }
+    class Human {
+        ten; gioitinh; cannang;
+        constructor(ten, gioitinh, cannang) {
+            this.ten = ten;
+            this.gioitinh = gioitinh;
+            this.cannang = cannang;
+        }
+        getTen() {
+            return this.ten;
+        }
+        noi(chuoi) {
+            document.write(this.ten + " nói: " + chuoi + ".<br><br>");
+        }
+        an(tao) {
+
+            if (tao.kiemtratao()) {
+                let self = this;
+                document.write(" Khối lượng táo: " + tao.weigh + " g. Ăn 1.<br>")
+                tao.giam();
+                this.cannang++;
+                document.write("Bây giờ " + this.ten + " nặng: " + this.cannang + "kg<br><br>");
+                if (tao.weigh == 0) {
+                    document.write(this.ten + " nói: Hết rồi !");
+                }
+                setTimeout(function () { self.an(tao) }, 10000);
+            }
+        }
+    }
+</script>
+
+<body>
+    <script>
+        var tao = new Apple();
+        var Adam = new Human("Adam", "Nam", 59);
+        var Erva = new Human("Evar", "nữ", 43);
+        Adam.noi("Hello");
+        document.write(Adam.ten + " bắt đầu ăn nào.<br>")
+        Adam.an(tao);
+
+    </script>
+</body>
+
+</html>
