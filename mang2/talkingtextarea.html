@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fake text </h1>
+    <textarea onkeyup="onTypetext(this)" cols="30" rows="10"></textarea>
+    <script>
+        var fakeText = "Tôi yêu Manchester United";
+        function onTypetext(textarea) {
+            const leng = textarea.value.length;
+            const arrStr = [];
+            for (let i = 0; i < leng; i++) {
+                arrStr.push(fakeText[i]);
+            }
+            const result = arrStr.join("");
+            textarea.value = result;
+        }
+    </script>
+</body>
+
+</html>
