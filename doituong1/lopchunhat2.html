@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="chunhat.js"></script>
+
+<body>
+    <span id="hienthi"></span><br>
+    <canvas id="myCanvas" width="400px" height="250px" style="border:1px solid #d3d3d3;">
+        <script>
+            var hcn = new Rectangle(300, 200);
+            var xuat = document.getElementById("hienthi");
+            xuat.innerHTML = "Chu vi: " + hcn.Chuvi() + " Diện tích: " + hcn.Area();
+            hcn.Draw("green");
+            hcn.setCrong(100);
+            xuat.innerHTML = "Chu vi: " + hcn.Chuvi() + " Diện tích: " + hcn.Area();
+            hcn.Draw("blue");
+
+        </script>
+</body>
+
+</html>

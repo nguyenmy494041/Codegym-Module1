@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+​
+
+<body>
+    <script>
+        let Dienthoai = function (pin) {
+            if (pin >= 0 && pin <= 100) {
+                this.pin = pin;
+            }
+            this.dangsoanthao = [];
+            this.hopthuden = [];
+            this.dagui = [];
+            this.trangthai = false;
+            this.Changetrangthai = function () {
+                this.trangthai = !this.trangthai;
+            }
+            this.sacPin = function () {
+                this.pin = pin++;
+                let self = this;
+                console.log(this.pin);
+                if (this.pin < 100) {
+
+                    setTimeout(function () {
+                        self.sacPin();
+                    }, 2000)
+                }
+                this.soantinnhan = function (str) {
+                    if (this.trangthai) {
+                        this.dangsoanthao.push(str);
+                        this.pin--;
+                    }
+                }
+                this.guitinnhan = function (Dienthoai, str) {
+                    if (this.trangthai) {
+                        this.dagui.push(str);
+                        Iphone.thuden.push(str);
+                        this.pin--;
+                    }
+                }
+                this.nhantinnhan = function (str) {
+                    if (this.trangthai) {
+                        this.hopthuden.push(str)
+                        this.pin--;
+                    }
+                }
+                this.xemtinnhan = function (str) {
+                    console.log(this.hopthuden);
+                }
+                this.xemtindagui = function (str) {
+                    console.log(this.dagui);
+                }
+                let Cucgach = new Dienthoai(95);
+                let Iphone = new Dienthoai(90);
+                Cucgach.Changetrangthai();
+
+                document.write(Cucgach.trangthai);
+                Cucgach.guitinnhan(Iphone, 'I love you 3000');
+                console.log(Iphone, hopthuden);
+            }
+
+        }
+    </script>
+</body>
+​
+
+</html>

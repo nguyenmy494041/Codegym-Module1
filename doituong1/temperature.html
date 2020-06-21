@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(do_C) {
+                if (do_C < -273.15) {
+                    this.do_C = -273.15;
+                    alert("Không thể thấp hơn -273.15 độ C! Thiết lập mặc định: -273.15");
+                }
+                else {
+                    this.do_C = do_C;
+                }
+            }
+            getdo_C() {
+                return this.do_C;
+            }
+            todo_F() {
+                return 1.8 * do_C + 32;
+            }
+            todo_K() {
+                return do_C + 273.15;
+            }
+        }
+        var tempera = new Temperature(-300);
+        var do_C = tempera.getdo_C();
+        document.write(` ${do_C} do_C tương đương với ${tempera.todo_F().toFixed(3)} do_F <br>`)
+        document.write(` ${do_C} do_C tương đương với ${tempera.todo_K()} do_K <br>`)
+    </script>
+</body>
+
+</html>

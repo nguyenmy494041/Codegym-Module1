@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body><span id="hienthi"></span> <br><br>
+    <canvas id="myCanvas" width="300px" height="150px" style="border:1px solid #d3d3d3;">
+
+        <script>
+            class rectangle {
+                constructor(crong, cdai) {
+                    this.cdai = cdai;
+                    this.crong = crong;
+                }
+                getCrong() {
+                    return this.crong;
+                }
+                getCdai() {
+                    return this.cdai;
+                }
+                setCrong(crong) {
+                    this.crong = crong;
+                }
+                setCdai(cdai) {
+                    this.cdai = cdai;
+                }
+                getChuvi() {
+                    return (this.cdai + this.crong) * 2;
+                }
+                getArea() {
+                    return this.cdai * this.crong;
+                }
+                draw(color, x, y) {
+                    let c = document.getElementById('myCanvas');
+                    let ctx = c.getContext("2d");
+                    ctx.fillStyle = color;
+                    ctx.fillRect(x, y, this.cdai, this.crong);
+                }
+            }
+
+            var recta = new rectangle(60, 100);
+            let a = document.getElementById("hienthi");
+            a.innerHTML = (`Chu vi: ${recta.getChuvi()} ; Diện tích: ${recta.getArea()}`);
+            recta.draw("red", 30, 30);
+            recta.setCdai(150)
+            recta.setCrong(100);
+            recta.draw("yellow", 30, 30);
+            a.innerHTML = (`Chiều dài: ${recta.getCdai()} ; Chiều rộng: ${recta.getCrong()}<br>Chu vi: ${recta.getChuvi()} ; Diện tích: ${recta.getArea()}`);
+        </script>
+</body>
+
+</html>

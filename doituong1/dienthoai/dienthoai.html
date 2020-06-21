@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<script>
+    class Phone {
+
+        constructor(idManhinh, phone, classBtn, baterry, idSac, idThongBao, name) {
+            // this.soantin = [];
+            this.guitinnhan = [];
+            this.nhantinnhan = [];
+            this.idManhinh = idManhinh;
+            this.baterry = baterry;
+            this.manhinh = document.getElementById(idManhinh);
+            this.phone = document.getElementById(phone)
+            this.isOn = true
+            this.classBtn = "." + classBtn;
+            this.idSac = idSac;
+            this.idThongBao = idThongBao;
+            this.name = name
+        }
+        sac() {
+            this.baterry++;
+            let self = this;
+            console.log(this.baterry)
+            document.getElementById(this.idSac).style.width = this.baterry + '%';
+            document.getElementById(this.idSac).innerHTML = this.baterry + '%';
+            document.getElementById(this.idSac).style.height = 20 + 'px';
+            document.getElementById(this.idSac).style.textAlign = 'center   ';
+            if (this.baterry < 15) {
+                document.getElementById(this.idSac).style.backgroundColor = 'red';
+            } else if (this.baterry > 50) {
+                document.getElementById(this.idSac).style.backgroundColor = 'green';
+            } else {
+                document.getElementById(this.idSac).style.backgroundColor = 'yellow';
+            }
+
+            if (this.baterry < 100) {
+                setTimeout(function () {
+                    self.sac();
+                }, 500);
+            }
+        }
+        dangsoantin() {
+            this.manhinh.value = "";
+            this.manhinh.style.display = "block";
+        }
+        guitin(may) {
+            this.guitinnhan.unshift(this.manhinh.value);
+            may.nhantinnhan.unshift(this.manhinh.value);
+
+            document.getElementById(may.idThongBao).innerHTML = 'new' + may.name;
+            document.getElementById(may.idThongBao).style.backgroundColor = 'deeppink';
+
+        }
+        hopthuden() {
+            this.manhinh.value = "";
+            this.manhinh.style.display = "block";
+            this.manhinh.value = this.nhantinnhan;
+        }
+        hopthudi() {
+            this.manhinh.style.display = "block";
+            this.manhinh.value = this.guitinnhan;
+        }
+        home() {
+            this.manhinh.disabled = true
+        }
+
+        toggleOnOff() {
+            this.isOn = !this.isOn
+
+            const cucdaBtnList = document.querySelectorAll(this.classBtn)
+
+            // console.log(cucdaBtnList)
+
+            cucdaBtnList.forEach(e => e.disabled = !this.isOn)
+        }
+    }
+</script>
+
+<body>
+    <table border="2" style="border-collapse: collapse;" id="phone1">
+        <tr>
+            <td id='idGachTB'></td>
+            <td><button onclick="cucgach.sac();">Sac</button></td>
+            <td>
+                <div id='sacCucGach'></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><textarea id="manhinh" cols="30" rows="10"></textarea> </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td><input type="button" class="cucgachBtn" id="" onclick="cucgach.dangsoantin()" value="soạnTN"> </td>
+            <td><input type="button" class="cucgachBtn" id="" onclick="cucgach.hopthuden()" value="HTden"> </td>
+            <td><input type="button" class="cucgachBtn" id="" onclick="cucgach.hopthudi()" value="HTdi"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" class="cucgachBtn" id="" onclick="cucgach.guitin(cucda)" value="sent"> </td>
+            <td><input type="button" id="" onclick="cucgach.toggleOnOff()" value="Nguồn"> </td>
+            <td><input type="button" class="cucgachBtn" id="" onclick="cucgach.home()" value="Home"> </td>
+        </tr>
+
+    </table><br><br><br><br>
+    <table border="2" style="border-collapse: collapse;" id="phone1">
+        <tr>
+            <td id='idDaTB'></td>
+            <td><button onclick="cucda.sac();">Sac</button></td>
+            <td>
+                <div id='sacCucDa'></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><textarea id="manhinh2" cols="30" rows="10"></textarea> </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td><input type="button" class="cucdaBtn" onclick="cucda.dangsoantin()" value="soạnTN"> </td>
+            <td><input type="button" class="cucdaBtn" onclick="cucda.hopthuden()" value="HTden"> </td>
+            <td><input type="button" class="cucdaBtn" onclick="cucda.hopthudi()" value="HTdi"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" class="cucdaBtn" onclick="cucda.guitin(cucgach)" value="sent"> </td>
+            <td><input type="button" onclick="cucda.toggleOnOff()" value="Nguồn"> </td>
+            <td><input type="button" class="cucdaBtn" onclick="cucda.home()" value="Home"> </td>
+        </tr>
+
+    </table>
+    <script>
+        var cucgach = new Phone("manhinh", "phone1", "cucgachBtn", 5, "sacCucGach", 'idGachTB', 'CG');
+        var cucda = new Phone("manhinh2", "phone2", "cucdaBtn", 30, "sacCucDa", 'idDaTB', 'CĐ');
+    </script>
+</body>
+
+</html>
