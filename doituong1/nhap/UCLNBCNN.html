@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function UCLN(a, b) {
+            let uc = null;
+            while (a != b) {
+                if (a > b) {
+                    a = a - b;
+                } else {
+                    b = b - a;
+                }
+            }
+            if (a == b) { uc = a; }
+            return uc;
+        }
+        function BCNN(a, b) {
+            return a * b / UCLN(a, b);
+        }
+
+
+        var ab = [2, 5, 4, 18, 3];
+        let tam = 1;
+        for (let i = 0; i < ab.length; i++) {
+            tam = BCNN(tam, ab[i]);
+        }
+        document.write(tam);
+
+
+    </script>
+
+
+</body>
+
+</html>

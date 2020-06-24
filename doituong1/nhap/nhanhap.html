@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <!-- <a href="http://w3c.org" target="_self">W3C</a>
+    <br> -->
+    <!-- <a href="http://w3c.org" target="_parent">W3C</a> -->
+    <!-- <canvas id="ccanvas" width="300px" height="300px" style="border:1px solid #d3d3d3;"></canvas><br><br>
+    <span id="hienthi"></span><br><br> -->
+
+    <script>
+        // function compareTriplets(a, b) {
+        //     let A = 0; let B = 0;
+        //     for (let i = 0; i < a.length; i++) {
+        //         if (a[i] > b[i]) {
+        //             A++;
+        //         } else if (a[i] < b[i]) {
+        //             B++;
+        //         }
+        //     }
+        //     let c = [];
+        //     c.push(A);
+        //     c.push(B);
+        //     return c;
+        // }
+
+        // var a = [12, 36, 42];
+        // var b = [42, 56, 35];
+        // document.write(compareTriplets(a, b));
+
+
+        // document.write(chuyen("06:40:03AM"));
+        // class Circle {
+        //     radius; color;
+        //     constructor(radius, color) {
+        //         this.radius = radius;
+        //         this.color = color;
+        //     }
+        //     getRadius() {
+        //         return this.radius;
+        //     }
+        //     getColor() {
+        //         return this.color;
+        //     }
+        //     getArea() {
+        //         return (this.radius * this.radius * Math.PI).toFixed(4);
+        //     }
+        //     getPerimeter() {
+        //         return (2 * this.radius * Math.PI).toFixed(4);
+        //     }
+        //     draw(canvas, x, y) {
+        //         let ctx = document.getElementById(canvas).getContext("2d");
+        //         ctx.beginPath();
+        //         ctx.arc(x, y, this.radius, Math.PI, 3 * Math.PI);
+        //         ctx.fillStyle = this.color;
+        //         ctx.fill();
+        //     }
+        // }
+        // var circle = new Circle(100, "red");
+        // document.getElementById("hienthi").innerHTML = `Chu vi: ${circle.getPerimeter()};
+        //   Diện tích: ${circle.getArea()}`;
+        // circle.draw("ccanvas", 150, 150);
+
+
+
+        // function plusMinus(arr) {
+        //     let duong = 0, am = 0, khong = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] > 0) {
+        //             duong++;
+        //         }
+        //         else if (arr[i] < 0) {
+        //             am++;
+        //         }
+        //         else {
+        //             khong++;
+        //         }
+        //     }
+        //     let mang = [];
+        //     mang.push((duong / arr.length).toFixed(6));
+        //     mang.push((am / arr.length).toFixed(6));
+        //     mang.push((khong / arr.length).toFixed(6));
+        //     return mang.join(" ");
+        // }
+        // var arr = [-4, 3, -9, -8, 1, 4, 1];
+
+        // document.write(plusMinus(arr));
+
+
+        // function Tinhtongtrumax(array) {
+        //     let max = array[0], sum = array[0];
+        //     for (let i = 1; i < array.length; i++) {
+        //         sum += array[i];
+        //         if (max < array[i]) {
+        //             max = array[i];
+        //         }
+        //     }
+        //     return sum - max;
+        // }
+        // var d = 5;
+        // var a = [11, 3, 4, 13, 5, 6];
+        // var b = [2, 2, 2, 2, 2, 2];
+        // var c = [-1, -2, -3, -4, -5];
+        // // document.write(Tinhtongtrumax(a) + "<br>");
+        // // document.write(Tinhtongtrumax(b) + "<br>");
+        // // document.write(Tinhtongtrumax(c) + "<br>");
+
+        // function Timmax(array) {
+        //     let max = array[0];
+        //     if (!Array.isArray(array)) return;
+        //     if (array.length == 0) {
+        //         return "Mảng không có phần tử";
+        //     }
+        //     else {
+
+        //         for (let i = 1; i < array.length; i++) {
+
+        //             if (max < array[i]) {
+        //                 max = array[i];
+        //             }
+        //         }
+
+        //     }
+        //     return max;
+        // }
+        // document.write(Timmax(d));
+
+
+        // function isNamnhuan(nam) {
+        //     let check = false;
+        //     if (nam % 400 == 0 ||
+        //         (nam % 4 == 0 && nam % 100 != 0)) {
+        //         return check = true;
+        //     }
+        //     return check;
+        // }
+
+        // var nam = +prompt("Nhập năm cần kiểm tra");
+
+        // while (nam <= 0 || !Number.isInteger(nam)) {
+        //     nam = +prompt("Xin nhập lại đúng số năm cần kiểm tra")
+        // };
+
+        // if (isNamnhuan(nam)) {
+        //     alert(nam + " là năm nhuận")
+        // }
+        // else {
+        //     alert(nam + " không phải là năm nhuận")
+        // }
+
+
+        // function isPrime(num) {
+        //     if (!Number.isInteger(num) || num < 2) {
+        //         return false;
+        //     } else {
+
+        //         for (let i = 2; i <= Math.sqrt(num); i++) {
+        //             if (num % i == 0) { return false; }
+        //         } return true;
+        //     }
+        // }
+        // document.write(isPrime(4.5));
+        // if (isPrime(nam)) {
+        //     document.write(nam + " là SNT")
+        // } else { document.write(nam + " không là SNT") }
+
+
+
+
+        // function getPrimeList(mang) {
+        //     console.log(typeof mang)
+        //     if (!Array.isArray(mang) || mang.length == 0) {
+        //         return;
+        //     }
+        //     else {
+        //         let mangkq = [];
+        //         for (let i = 0; i < mang.length; i++) {
+        //             if (isPrime(mang[i])) {
+        //                 mangkq.push(mang[i]);
+        //             }
+        //         } if (mangkq.length != 0) {
+        //             return mangkq
+        //         } else { return "mảng không có SNT nào cả" }
+        //     }
+        // }
+        // var a = [2, 6, 9, 7, 13, 15];
+        // var b = ["jhsjchs", "hagvja", 3, 5, 8];
+        // var c = "ahvcjvacj"
+        // document.write(getPrimeList(b));
+
+
+        // function deleteElement(arr, index) {
+        //     for (let i = index; i < arr.length - 1; i++) {
+        //         arr[i] = arr[i + 1]
+        //     }
+        //     arr.pop();
+        //     let array = arr;
+        //     return array;
+        // }
+
+        // function getNewArr(arr, index) {
+        //     let newArr = arr
+        //     for (let i = index; i < newArr.length - 1; i++) {
+        //         newArr[i] = newArr[i + 1]
+        //     }
+        //     newArr.pop();
+
+        //     return newArr
+        // }
+
+        // var arr = [1, 2, 3, 4, 5];
+        // let array = getNewArr(arr, 0)
+        // document.write(array + "<br>");
+        // document.write(arr);
+
+
+    </script>
+
+
+</body>
+
+</html>
